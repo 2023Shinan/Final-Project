@@ -6,12 +6,16 @@ public class EnemyControlScript : MonoBehaviour
 {
     CharacterController controller;
     [SerializeField] Transform groundcheck;
-    [SerializeField] LayerMask ground;
-    /*
-    bool isGrounded( )
+    [SerializeField] LayerMask Ground;
+
+    private void Update()
     {
-        Physics.CheckSphere(groundcheck.position, .1f, ground);
+        bool isGrounded()
+        {
+            return Physics.CheckSphere(groundcheck.position, .1f, Ground);
+        }
     }
-    */
+
+    
 
 }
