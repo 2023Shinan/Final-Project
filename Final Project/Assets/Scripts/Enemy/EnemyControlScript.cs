@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EnemyControlScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    CharacterController controller;
+    [SerializeField] Transform groundcheck;
+    [SerializeField] LayerMask ground;
+    /*
+    bool isGrounded( )
     {
-        
+        Physics.CheckSphere(groundcheck.position, .1f, ground);
     }
+    */
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
