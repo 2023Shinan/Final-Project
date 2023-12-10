@@ -19,5 +19,10 @@ public class PlayerAttackControl : MonoBehaviour
     {
         Vector3 distanceBetweenObjects = Player.transform.InverseTransformDirection(Enemy.transform.position);
         Debug.Log(distanceBetweenObjects.sqrMagnitude);
+
+        if(distanceBetweenObjects.sqrMagnitude <2 && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Destroy(Enemy);
+        }
     }
 }
