@@ -7,11 +7,13 @@ public class PlayerAttackControl : MonoBehaviour
     public GameObject Player;
     public GameObject Enemy;
 
-    string EnemyTage = "Enemy";
+    string playerTag = "Player";
+    string enemyTag = "Enemy";
     // Start is called before the first frame update
     void Start()
     {
-        Enemy = GameObject.FindGameObjectWithTag(EnemyTage);
+        Player = GameObject.FindGameObjectWithTag(playerTag);
+        Enemy = GameObject.FindGameObjectWithTag(enemyTag);
     }
     
     // Update is called once per frame
@@ -20,9 +22,14 @@ public class PlayerAttackControl : MonoBehaviour
         Vector3 distanceBetweenObjects = Player.transform.InverseTransformDirection(Enemy.transform.position);
         Debug.Log(distanceBetweenObjects.sqrMagnitude);
 
-        if(distanceBetweenObjects.sqrMagnitude <2 && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Destroy(Enemy);
-        }
+        //if(distanceBetweenObjects.sqrMagnitude < 2 && Input.GetKeyDown(KeyCode.Mouse0))
+        //{
+            //if (Enemy != null)
+            //{
+                //Destroy(Enemy);
+            //}
+                
+            
+        
     }
 }
