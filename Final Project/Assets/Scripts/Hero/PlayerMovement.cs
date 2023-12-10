@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Variables
-
+    public AudioSource swingSound;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
@@ -114,6 +114,8 @@ public class PlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(0.9f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0);
+
+        swingSound.Play(0);
     }
 
 }
