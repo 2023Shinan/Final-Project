@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Variables
+
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
@@ -41,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
-        
+
+
     }
     private void Move()
     {
